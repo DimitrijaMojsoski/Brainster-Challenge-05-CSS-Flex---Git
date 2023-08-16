@@ -1,0 +1,23 @@
+@use "../abstracts/mixins" as mix;
+@use "../abstracts/variables" as var;
+
+.section3 {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  background-color: rgb(231, 231, 231);
+  @extend%section;
+  .section3-inner {
+    width: 60%;
+    @media (max-width: 468px) {
+      width: 90%;
+    }
+
+    hr {
+      height: 0.5vh;
+      width: 20%;
+      background-color: rgb(58, 58, 201);
+      border: none;
+    }
+  }
+}

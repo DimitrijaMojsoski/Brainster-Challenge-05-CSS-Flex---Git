@@ -1,0 +1,47 @@
+@use "../abstracts/mixins" as mix;
+@use "../abstracts/variables" as var;
+
+.section5 {
+  background-color: rgb(231, 231, 231);
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  background-color: rgb(231, 231, 231);
+  @extend%section;
+  .section5-inner {
+    width: 60%;
+    @media (max-width: 468px) {
+      width: 90%;
+    }
+    hr {
+      height: 0.5vh;
+      width: 20%;
+      background-color: rgb(58, 58, 201);
+      border: none;
+    }
+  }
+  form {
+    @extend%section;
+    @media (max-width: 768px) {
+      display: flex;
+      flex-direction: column;
+    }
+    .btn {
+      margin-left: 10px;
+      @media (max-width: 768px) {
+        margin-top: 10px;
+        padding: 20px 30px;
+        @media (max-width: 468px) {
+          padding: 20px 30px;
+        }
+      }
+    }
+    input {
+      padding: 5px 10px;
+      width: 300px;
+      @media (max-width: 468px) {
+        padding: 20px 30px;
+      }
+    }
+  }
+}
